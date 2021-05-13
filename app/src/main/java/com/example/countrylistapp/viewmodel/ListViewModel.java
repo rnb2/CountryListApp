@@ -12,7 +12,6 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.CompositeDisposable;
@@ -72,6 +71,8 @@ public class ListViewModel extends ViewModel {
         disposable.clear();
     }
 
+    //temporary data, before countryService use.
+    @Deprecated
     private void fetchCountries2() {
         loading.setValue(true);
         CountryModel countryModel1 = new CountryModel("Albania", "Tirana", "");
